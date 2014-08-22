@@ -25,7 +25,7 @@ mkdir -p "${CRANE_DIR}"
 
 # Ensure we have curl and checkinstall
 apt-get install -y -q curl
-apt-get install -y -q --no-install-recommends checkinstall
+apt-get install -y -q --no-install-recommends checkinstall # Checkinstall pulls a ton of build stuff we don't want.
 
 # Move to a working directory
 work_dir=$(mktemp -d)
