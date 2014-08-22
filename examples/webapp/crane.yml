@@ -1,0 +1,10 @@
+containers:
+- dockerfile: webapp
+  image: scalr/webapp
+  name: webapp
+  run:
+    detach: true
+    publish:
+        - 8000:8000
+    volume:
+        - /var/config:/var/config:ro
