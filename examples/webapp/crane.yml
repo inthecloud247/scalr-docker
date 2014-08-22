@@ -1,6 +1,5 @@
 containers:
-- dockerfile: webapp
-  image: scalrtutorials/webapp
+- image: scalrtutorials/webapp
   name: webapp
   run:
     detach: true
