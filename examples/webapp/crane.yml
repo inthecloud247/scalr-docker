@@ -1,5 +1,5 @@
 containers:
-- image: scalrtutorials/webapp
+- image: 'scalrtutorials/webapp:1.0.0'
   name: webapp
   run:
     detach: true
