@@ -15,6 +15,7 @@ set -o nounset
 
 # Checkinstall specific prameters
 : ${PACKAGE_MAINTAINER:="thomas@scalr.com"}
+: ${PACKAGE_DEPS:='lxc-docker \( \>= 1.0.0\)'}
 
 
 # Actually install now
@@ -37,4 +38,16 @@ echo "Crane - Lift containers with ease" > description-pak
 CRANE_REPO="https://github.com/michaelsauter/crane"
 curl -L -o "${CRANE_BIN}" "${CRANE_REPO}/releases/download/v${CRANE_VERSION}/crane_${PLATFORM}_${ARCH}"
 chmod +x -- "${CRANE_BIN}"
-checkinstall --type=debian --install=yes --pkgname="${CRANE_BIN}" --pkgsource="${CRANE_REPO}" --pkgversion="${CRANE_VERSION}" --pkgarch="${ARCH}" --pkglicense="MIT" --requires="lxc-docker" --maintainer="${PACKAGE_MAINTAINER}" --nodoc --default mv "${CRANE_BIN}" "${CRANE_DIR}"
+checkinstall \
+  --type=debian \
+  --install=yes \
+  --pkgname="${CRANE_BIN}" \
+  --pkgsource="${CRANE_REPO}" \
+  --pkgversion="${CRANE_VERSION}" \
+  --pkgarch="${ARCH}" \
+  --pkglicense="MIT" \
+  --requires="${PACKAGE_DEPS}" \
+  --maintainer="${PACKAGE_MAINTAINER}" \
+  --nodoc \
+  --default \
+  mv "${CRANE_BIN}" "${CRANE_DIR}"
