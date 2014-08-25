@@ -7,7 +7,7 @@ A repository of scripts to use Docker with Scalr.
 Usage
 =====
 
-We recommend using those scripts with Scalarizr 2.9.31's "Script URI"
+We recommend using these scripts with Scalarizr 2.9.31's "Script URI"
 functionality, which lets you run a script by passing its URL, but you
 can also copy them as Scalr Scripts.
 
