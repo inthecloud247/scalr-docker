@@ -1,9 +1,9 @@
 containers:
-- image: 'scalrtutorials/webapp:1.0.0'
-  name: webapp
-  run:
-    detach: true
-    publish:
-        - 8000:8000
-    volume:
-        - /var/config:/var/config:ro
+  webapp:
+    image: 'scalrtutorials/webapp:1.0.0'
+    run:
+      detach: true
+      publish:
+          - 8000:8000
+      volume:
+          - /var/config:/var/config:ro

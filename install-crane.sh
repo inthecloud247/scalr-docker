@@ -5,7 +5,7 @@ set -o errexit
 set -o nounset
 
 # Parameters that can be overriden. Mainly just useful defaults.
-: ${CRANE_VERSION:="0.8.1"}
+: ${CRANE_VERSION:="0.12.0"}
 : ${PLATFORM:="linux"}
 : ${CRANE_ARCH:="amd64"}
 
